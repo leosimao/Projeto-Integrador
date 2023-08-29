@@ -4,7 +4,7 @@
 
     (Fazer Login) as UC001
     (Verificar cadastro maquinário) as UC002
-    (Cadastrar Frota) as UC003
+    (Cadastrar Maquinário) as UC003
     (Olhar historico de manutenção) as UC004
     (Excluir Maquinário) as UC005
     (Abrir ordem de manutenção) as UC006
@@ -19,9 +19,11 @@
     usuario -- UC007
     usuario -- UC009
 
-    UC002 ..> UC003 : <<extend>>
-    UC002 ..> UC004 : <<extend>>
-    UC002 ..> UC005 : <<extend>>
+    UC002 <.. UC003 : <<extend>>
+    UC002 <.. UC004 : <<extend>>
+    UC002 <.. UC005 : <<extend>>
+    UC006 <.. UC008 : <<extend>>
+
     UC007 ..> UC008 : <<include>>
 
 
