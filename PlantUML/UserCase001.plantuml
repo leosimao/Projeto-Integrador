@@ -1,0 +1,28 @@
+@@startuml
+    left to right direction
+    :Usuario: as usuario
+
+    (Fazer Login) as UC001
+    (Verificar cadastro maquinário) as UC002
+    (Cadastrar Frota) as UC003
+    (Olhar historico de manutenção) as UC004
+    (Excluir Maquinário) as UC005
+    (Abrir ordem de manutenção) as UC006
+    (Cadastro de Insumos) as UC007
+    (Atualizar Estoque) as UC008
+    (Verificar status da manutenção) as UC009
+        
+
+    usuario -- UC001
+    usuario -- UC002
+    usuario -- UC006
+    usuario -- UC007
+    usuario -- UC009
+
+    UC002 ..> UC003 : <<extend>>
+    UC002 ..> UC004 : <<extend>>
+    UC002 ..> UC005 : <<extend>>
+    UC007 ..> UC008 : <<include>>
+
+
+@@enduml
