@@ -11,8 +11,10 @@
     (Gerenciar componentes \n de manutenção) as UC007
     (Atualizar Estoque) as UC008
     (Gerenciar agenda \n de manutenção preventiva) as UC010
-    (Cadastrar de Localização) as UC012
+    (Cadastrar locais de produção) as UC012
     (Editar informações do maquinário) as UC013
+    (Cadastrar locais de estoque) as UC014
+    (Selecionar peças que serão \n trocadas) as UC015
 
     usuario -- UC001
     usuario -- UC002
@@ -20,11 +22,14 @@
     usuario -- UC007
     usuario -- UC010
     usuario -- UC012
+    usuario -- UC014
 
     UC002 <.. UC003 : <<extend>>
     UC002 <.. UC004 : <<extend>>
     UC002 <.. UC005 : <<extend>>
     UC002 <.. UC013 : <<extend>>
     UC007 ..> UC008 : <<include>>
+    UC006 ..> UC015 : <<include>>
+    UC015 ..> UC008 : <<include>>
 
 @@enduml
