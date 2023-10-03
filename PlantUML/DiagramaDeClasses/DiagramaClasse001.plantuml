@@ -1,0 +1,18 @@
+@@startuml
+    class OrdemDeManutencao{
+        Long numeroDaOrdem
+        String LocalDaOrdem
+        int codigoEquipamento
+        String pecaDeTroca
+        boolean statusOrdemDeServico
+
+        Long getNumeroDaOrdem()
+        Long setNumeroDaOrdem()
+        String verificaNumeroDaOrdem()
+        String getLocalDaOrdem()
+        String setLocalDaOrdem()
+        int setCodigoEquipamento()
+        boolean getStatusOrdemDeServio()
+
+    }
+@@enduml
