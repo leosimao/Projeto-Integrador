@@ -5,14 +5,21 @@
         int codigoEquipamento
         String pecaDeTroca
         boolean statusOrdemDeServico
+    }
 
-        Long getNumeroDaOrdem()
-        Long setNumeroDaOrdem()
-        String verificaNumeroDaOrdem()
-        String getLocalDaOrdem()
-        String setLocalDaOrdem()
-        int setCodigoEquipamento()
-        boolean getStatusOrdemDeServio()
+    class Local {
+        int codLocal
+        String nomeLocal
+        boolean tipoLocal
+        int car
+        String enderecoLocal
+    }
 
+    class Peca {
+        int codPeca
+        String nomePeca
+        int quantidadePeca
+        double valorPeca
+        String dataDeEntrada
     }
 @@enduml
