@@ -1,0 +1,61 @@
+@startuml
+
+    Class Pessoa {
+        # int id
+        # String nome
+        # String email
+        # String telefone
+        # int nivelAdm
+        --
+        + void Pessoa()
+        .. getters e setters ..
+        + String getNome()
+        + void setNome(String nome)
+        + String getEmail()
+        + void setEmail(String email)
+        + String getTelefone()
+        + void setTelefone(String telefone)
+        + int getNivelAdm()
+        + void setNivelAdm(int nivelAdm)
+    } 
+
+    Class Usuario{  
+        + void Usuario()
+    }
+    Class Gestor{
+        + void Gestor()
+    }
+    abstract class Crud{
+        + void cadastrar()
+        + void mostar()
+        + void modificar()
+        + void remover()
+    }
+
+    class Equipamento{
+        + void Equipamento()
+    }
+
+    class OrdensServico{
+        - Peca peca
+        - local local
+
+        + void OrdensServico()
+    }
+    
+    Class Local{
+        + void Local()
+    }
+
+    Usuario --|> Pessoa
+    Gestor --|> Pessoa
+    Gestor -- Usuario
+    Gestor --* Crud : usa
+    Usuario --* Crud : usa
+    Crud --o Pessoa
+    Crud -- Usuario
+    Crud -- Equipamento
+    Crud -- OrdensServico
+    Crud -- Local
+
+@enduml
